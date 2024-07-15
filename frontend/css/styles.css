@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+header {
+    background-color: #9f3647;
+    padding: 30px 30px 0px 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+li {
+    color: white;
+    padding: 10px;
+}
+
+.login {
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+main {
+    background-color: black;
+}
+
+.principal {
+    background-image: url("../img/banner-bg.jpg");
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    gap: 20px;
+}
+
+.principal h1 {
+    font-size: 4rem;
+    margin: 0 70px 0 70px;
+}
+
+.principal h2 {
+    font-size: 2rem;
+}
+
+.principal a {
+    text-decoration: none;
+    color: white;
+    background-color: #9f3647;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.searcher {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+.searcher h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.searchInput {
+    height: 50px;
+    width: 500px;
+    border-radius: 25px;
+    border: 2px solid white;
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+.searcherButton {
+    background-color: #9f3647;
+    color: white;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid white;
+    padding: 0 20px;
+    font-size: 1.2rem;
+}
+
+.trend {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.trend h3 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.trendMovies {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.trend img {
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.trend button {
+    border: 1px solid white;
+    background-color: #9f3647;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    margin-left: 20px;
+}
+
+.top {
+    padding-bottom: 40px;
+}
+
+.top h3 {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.topMovies {
+    width: 80%;
+    margin: 0 auto;
+    overflow-x: scroll;
+    display: flex;
+    padding-bottom: 40px;
+}
+
+.topMovies img {
+    width: 170px;
+    border-radius: 5px;
+    margin-left: 30px;
+    object-fit: cover;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(23, 23, 23);
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #9f3647;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:#9f3647;
+}
+
+footer {
+    background-color: #9f3647;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.admin {
+    background-color: black;
+    border-radius: 5px;
+}
+
+.arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
