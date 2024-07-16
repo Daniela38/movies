@@ -1,6 +1,5 @@
 package com.ar.apimovies.movies.Model;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,6 +20,4 @@ public class Movies {
     private String titulo; 
     private String genero; 
     private String duracion;
-    @Column(name = "imagen", length = 10000)
-    private String imagen;
 }

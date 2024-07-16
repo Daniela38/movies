@@ -23,11 +23,13 @@ public class MoviesController {
 
     @GetMapping("")
     public List<Movies> getMovies() {
+        System.out.println("Fetching movies");
         return moviesService.getMovies();
     }
 
     @PostMapping("") 
-    public void addMovie(@RequestBody Movies movie) {
-        moviesService.addMovie(movie);
+    public Movies addMovie(@RequestBody Movies movie) {
+        System.out.println("Adding movie: " + movie);
+        return moviesService.addMovie(movie);
     } 
 }

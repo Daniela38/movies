@@ -15,21 +15,11 @@ public class MoviesService {
     @Autowired
     MoviesRepository moviesRepository;
 
-    private static final int MAX_IMAGE_SIZE = 2 * 1024 * 1024;
-
     public List<Movies> getMovies() {
         return moviesRepository.findAll();
     }
 
-    public Movies addMovie(Movies movie) throws IllegalArgumentException {
-
-        String base64Image = movie.getImagen();
-    byte[] imageBytes = Base64.getDecoder().decode(base64Image.split(",")[1]);
-
-    if (imageBytes.length > MAX_IMAGE_SIZE) {
-        throw new IllegalArgumentException("El tamaño de la imagen excede el límite permitido");
-    }
-
+    public Movies addMovie(Movies movie) {
         return moviesRepository.save(movie);
     }
     

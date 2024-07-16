@@ -8,22 +8,12 @@ form.addEventListener('submit', function (event) {
 
     const title = document.getElementById('title').value;
     const gender = document.getElementById('gender').value;
-    const duration = document.getElementById('duration').value;
-    const imageInput = document.getElementById('image');
+    const duration = document.getElementById('duration').value
 
-    if (imageInput.files[0].size > 2 * 1024 * 1024) { // 2MB limit
-        alert('La imagen es demasiado grande. El tamaño máximo permitido es de 2MB.');
-        return;
-    }
-
-    const reader = new FileReader();
-
-    reader.onloadend = function () {
         const movie = {
             titulo: title,
             genero: gender,
-            duracion: duration,
-            imagen: reader.result
+            duracion: duration
         };
 
         console.log('Sending movie data:', movie)
@@ -48,8 +38,7 @@ form.addEventListener('submit', function (event) {
         form.reset();
     })
     .catch(error => console.error('Error:', error));
-    }
-    reader.readAsDataURL(imageInput.files[0]);
+    
 });
 
 function addMovieToTable(movie) {
@@ -57,12 +46,6 @@ function addMovieToTable(movie) {
     row.insertCell(0).innerText = movie.titulo;
     row.insertCell(1).innerText = movie.duracion;
     row.insertCell(2).innerText = movie.genero;
-    const imgCell = row.insertCell(3);
-    const img = document.createElement('img');
-    img.src = movie.imagen;
-    img.style.width = '50px';
-    img.style.height = '50px';
-    imgCell.appendChild(img);
     console.log('addmoviesToTable se está ejecutando')
 }
 
